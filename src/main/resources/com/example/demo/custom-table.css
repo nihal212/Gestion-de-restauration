@@ -1,0 +1,24 @@
+.custom-table {
+    -fx-background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond */
+    -fx-border-radius: 0.8rem; /* Bordure arrondie */
+    -fx-box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05); /* Ombre */
+
+    -fx-min-height: 90vh; /* Hauteur minimale */
+    -fx-min-width: 82vw; /* Largeur minimale */
+
+    -fx-max-height: 90vh; /* Hauteur maximale */
+    -fx-max-width: 82vw; /* Largeur maximale */
+
+    -fx-backdrop-blur: 7px; /* Flou du fond */
+
+    -fx-padding: 0.8rem; /* Espace intérieur */
+    -fx-spacing: 1rem; /* Espacement entre les éléments enfants */
+
+    /* ... Autres styles spécifiques à votre TableView ... */
+
+    /* Styles spécifiques à la TableView */
+    -fx-table-cell-border-color: #e0e0e0; /* Couleur de la bordure des cellules */
+    -fx-table-cell-border-width: 0.5px; /* Largeur de la bordure des cellules */
+
+    /* ... Ajoutez d'autres styles personnalisés si nécessaire ... */
+}

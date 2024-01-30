@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="commnetzone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="270.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.commentairecontrolleur">
+   <children>
+      <Label fx:id="idcommnet" alignment="CENTER" layoutX="16.0" layoutY="16.0" prefHeight="103.0" prefWidth="237.0" style="-fx-background-color: rgb(134, 168, 63); -fx-background-radius: 20; -fx-text-fill: white;" stylesheets="@style.css" text="LABEL">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="200.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@2486583-icone-de-vecteur-de-commentaire-vectoriel-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="54.0" layoutX="32.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@3464867-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

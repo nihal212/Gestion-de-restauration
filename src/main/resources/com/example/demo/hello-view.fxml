@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="clientpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="801.0" prefWidth="1528.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <left>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="260.0" styleClass="left" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="258.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="1.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="215.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@output-onlinepngtools%20(36).png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="329.0" styleClass="myButton" stylesheets="@style.css" text="HOUSE OF CHEF" textFill="#86a83f">
+                     <VBox.margin>
+                        <Insets bottom="30.0" right="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Calibri Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="Dashboard" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="96.0" styleClass="myButton" stylesheets="@style.css" text="Dashboard">
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="10.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="MENU" mnemonicParsing="false" onAction="#switchForm" styleClass="myButton" stylesheets="@style.css" text="MENU">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(3).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" top="6.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="DELIVERYORDER" mnemonicParsing="false" onAction="#switchForm" styleClass="myButton" stylesheets="@style.css" text="DELIVERY ORDER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0" />
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox prefHeight="85.0" prefWidth="254.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@output-onlinepngtools%20(4).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="logout2" mnemonicParsing="false" onAction="#switchForm" styleClass="myButton" stylesheets="@style.css" text="Log Out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="70.0" left="5.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="1278.0" styleClass="top" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@téléchargement%20(1).png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <TextField prefHeight="26.0" prefWidth="497.0" promptText="search for  food" style="-fx-background-radius: 15;" styleClass="searchField" stylesheets="@style.css">
+               <HBox.margin>
+                  <Insets left="5.0" top="17.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="600.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@téléchargement%20(2).png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="5.0" top="2.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="260.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="754.0" prefWidth="1307.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="clientinterface" layoutX="10.0" layoutY="10.0" prefHeight="708.0" prefWidth="1229.0" visible="false">
+               <children>
+                  <AnchorPane fx:id="menuforme" layoutX="44.0" layoutY="96.0" prefHeight="624.0" prefWidth="815.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <ScrollPane fx:id="menu_scroll" layoutX="30.0" layoutY="76.0" prefHeight="526.0" prefWidth="754.0" style="-fx-border-radius: 20;" AnchorPane.rightAnchor="31.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane" prefHeight="542.0" prefWidth="534.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="214.0" layoutY="16.0" prefHeight="22.0" prefWidth="192.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="HOW DO YOU WANT TO">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="38.0" prefHeight="26.0" prefWidth="79.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="ORDER ?">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="86.0" fitWidth="64.0" layoutX="399.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(14).png" />
+                           </image>
+                        </ImageView>
+                        <CheckBox fx:id="checkbook" layoutX="503.0" layoutY="4.0" mnemonicParsing="false" onAction="#choiseOrder" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-text-fill: WHITE; -fx-background-radius: 10;" text="BOOK A TABLE" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checktake" layoutX="503.0" layoutY="39.0" mnemonicParsing="false" onAction="#choicetake" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-text-fill: WHITE; -fx-background-radius: 10;" text="TAKE IT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="334.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Animation%20-%201704139737972.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="payemment" layoutX="877.0" layoutY="4.0" prefHeight="711.0" prefWidth="407.0" style="-fx-background-color: white; -fx-background-radius: 30;" stylesheets="@style.css" AnchorPane.leftAnchor="877.0">
+                     <children>
+                        <TableView fx:id="menu_table" layoutX="24.0" layoutY="25.0" onMouseClicked="#menuSelectOrder" prefHeight="342.0" prefWidth="358.0">
+                           <columns>
+                              <TableColumn fx:id="menu_platname" prefWidth="193.60003662109375" text="plat name" />
+                              <TableColumn fx:id="menu_Quantité" prefWidth="84.7999267578125" text="quantity" />
+                              <TableColumn fx:id="menu_pricecol" prefWidth="79.2000732421875" text="price" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="totaltaxt" layoutX="168.0" layoutY="436.0" onAction="#menuGetTotal" promptText="\$0.0" style="-fx-border: none;" />
+                        <Label fx:id="total" alignment="CENTER" layoutX="100.0" layoutY="439.0" prefHeight="18.0" prefWidth="49.0" text="Total :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amounttext" layoutX="168.0" layoutY="482.0" onAction="#menuAmount" promptText="\$0.0" />
+                        <Label fx:id="amount" alignment="CENTER" layoutX="92.0" layoutY="482.0" prefHeight="25.0" prefWidth="66.0" text="Amount :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="change" alignment="CENTER" layoutX="94.0" layoutY="532.0" prefHeight="20.0" prefWidth="62.0" text="Change :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="changetext" layoutX="168.0" layoutY="529.0" promptText="\$0.0" />
+                        <Button fx:id="menupay" alignment="CENTER" layoutX="42.0" layoutY="577.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#menuPayBtn" prefHeight="52.0" prefWidth="350.0" styleClass="buttonpay" stylesheets="@style.css" text="PAY">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="menuremove" layoutX="42.0" layoutY="661.0" mnemonicParsing="false" onAction="#menuRemoveBtn" prefHeight="40.0" prefWidth="99.0" styleClass="buttonpay" text="Remove">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                        <Button fx:id="menurecip" layoutX="296.0" layoutY="661.0" mnemonicParsing="false" onAction="#menuReceiptBtn" prefHeight="40.0" prefWidth="95.0" styleClass="buttonpay" stylesheets="@style.css" text="Receipt">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutX="44.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="815.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="71.0" fitWidth="96.0" layoutX="25.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="12.0">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(19).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="dishes" layoutX="100.0" layoutY="33.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="DISHES">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="56.0" fitWidth="72.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools__18_-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="fast_food" layoutX="100.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="FAST-FOOD">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="64.0" fitWidth="82.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(20).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="soup" layoutX="87.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="SOUP">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="65.0" fitWidth="53.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(21).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="drinks" layoutX="85.0" layoutY="45.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="DRINKS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Dashboard_client" layoutX="31.0" layoutY="13.0" prefHeight="717.0" prefWidth="1320.0">
+               <children>
+                  <AnchorPane layoutX="16.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="895.0" style="-fx-background-color: white; -fx-background-radius: 60;" AnchorPane.bottomAnchor="428.80000000000007" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <ImageView fitHeight="272.0" fitWidth="430.0" layoutX="455.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="455.0">
+                           <image>
+                              <Image url="@istockphoto-823799902-612x6121.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="111.0" layoutY="152.0" prefHeight="40.0" prefWidth="246.0" style="-fx-background-radius: 60; -fx-background-color: WHITE; -fx-text-fill: red;" text="SPECIAL DAY" textFill="#86a83f">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="98.0" layoutY="192.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="272.0" style="-fx-background-color: rgb(134, 168, 63); -fx-background-radius: 30;">
+                           <children>
+                              <ImageView fitHeight="116.0" fitWidth="108.0" layoutX="164.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pngtree-burger-png-images-png-image_13164937-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="14.0" layoutY="59.0" prefHeight="28.0" prefWidth="180.0" text="the full price of burgers" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="65.0" fitWidth="105.0" layoutX="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Animation%20-%201704143154141%20(2).gif" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="659.0" layoutY="132.0" text="Label" />
+                        <Label alignment="CENTER" layoutX="26.0" layoutY="14.0" prefHeight="54.0" prefWidth="429.0" style="-fx-background-radius: 60; -fx-text-fill: #ff931e;" text="100% OFF TASTY FOOD ">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="83.0" layoutY="68.0" prefHeight="38.0" prefWidth="314.0" style="-fx-background-radius: 60; -fx-text-fill: #ff931e;" text="ON YOUR HAND" textFill="#86a83f">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="928.0" layoutY="14.0" minHeight="-Infinity" onKeyPressed="#enterHandler" prefHeight="626.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <ScrollPane layoutX="33.0" layoutY="114.0" prefHeight="487.0" prefWidth="287.0">
+                           <content>
+                              <GridPane fx:id="gridcomment" prefHeight="475.0" prefWidth="274.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="42.0" layoutY="14.0" prefHeight="39.0" prefWidth="132.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="FEED BACK OUR ">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="50.0" prefHeight="27.0" prefWidth="105.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="CUSTOMER">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="messageTextField" alignment="TOP_LEFT" layoutX="18.0" layoutY="406.0" prefHeight="170.0" prefWidth="306.0" promptText="ENTER YOU  MESSAGE" visible="false" />
+                        <ImageView fitHeight="123.0" fitWidth="178.0" layoutX="144.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools__24_-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                  <Button fx:id="msgbutton" alignment="CENTER" layoutX="945.0" layoutY="648.0" mnemonicParsing="false" onAction="#comment" prefHeight="77.0" prefWidth="306.0" style="-fx-background-radius: 60; -fx-background-color: rgba(255, 147, 30, 255); -fx-text-fill: black;" stylesheets="@style.css" text="WHATE YOU FEEL ABOUT US" AnchorPane.topAnchor="648.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="958.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@msg-7-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="15.0" layoutY="350.0" prefHeight="358.0" prefWidth="857.0" style="-fx-border-radius: 20; -fx-border-width: 15;">
+                     <children>
+                        <GridPane fx:id="griddashbord" layoutX="21.0" layoutY="28.0" prefHeight="291.0" prefWidth="795.0">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Label alignment="CENTER" layoutX="198.0" layoutY="316.0" prefHeight="47.0" prefWidth="531.0" style="-fx-background-color: white; -fx-background-radius: 10;" stylesheets="@style.css" text=" FAVORITE  FOOD FOR OUR CUSTOMERS" textFill="#ff931e" AnchorPane.bottomAnchor="364.0" AnchorPane.topAnchor="316.0">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="Delilevrydash" layoutX="21.0" layoutY="7.0" prefHeight="746.0" prefWidth="1292.0" visible="false">
+               <children>
+                  <AnchorPane layoutX="31.0" layoutY="5.0" prefHeight="238.0" prefWidth="847.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+                     <children>
+                        <ImageView fitHeight="231.0" fitWidth="365.0" layoutX="442.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(29).png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="48.0" layoutY="26.0" prefHeight="36.0" prefWidth="434.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="WHAT ARE THE PROFITABLE" textFill="#ff931e">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="19.0" layoutY="92.0" prefHeight="42.0" prefWidth="462.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="PICKUP AND DELIVERY" textFill="#ff931e">
+                           <font>
+                              <Font name="Cascadia Code Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="156.0" fitWidth="159.0" layoutX="372.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(32).png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="175.0" fitWidth="157.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(32).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="900.0" layoutY="5.0" prefHeight="734.0" prefWidth="378.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+                     <children>
+                        <WebView fx:id="web" layoutX="13.0" layoutY="29.0" prefHeight="634.0" prefWidth="386.0" />
+                        <ImageView fitHeight="70.0" fitWidth="193.0" layoutX="119.0" layoutY="663.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Animation%20-%201704140218173.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="29.0" layoutY="249.0" prefHeight="483.0" prefWidth="852.0" style="-fx-background-color: white; -fx-background-radius: 40;">
+                     <children>
+                        <ScrollPane layoutX="41.0" layoutY="134.0" prefHeight="303.0" prefWidth="753.0">
+                           <content>
+                              <GridPane fx:id="gridDelevery" prefHeight="267.0" prefWidth="702.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="330.0" layoutY="14.0" text="GIVE YOUR INFORMATIONS " textFill="#2d6f91">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="400.0" layoutY="54.0" text="FOR DELIVERY" textFill="#2d6f91">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="68.0" fitWidth="69.0" layoutX="548.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Animation%20-%201704139871622.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="235.0" fitWidth="349.0" layoutX="65.0" layoutY="-74.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@544050~1.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="register" layoutX="414.0" layoutY="91.0" mnemonicParsing="false" onAction="#registre" prefHeight="36.0" prefWidth="86.0" style="-fx-background-color: rgba(255, 147, 30, 255);" stylesheets="@../../../../java/com/example/demo/style.css" text="REGISTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="payDelivery" layoutX="504.0" layoutY="92.0" mnemonicParsing="false" onAction="#paychamps" prefHeight="34.0" prefWidth="59.0" style="-fx-background-color: rgba(255, 147, 30, 255);" stylesheets="@../../../../java/com/example/demo/style.css" text="PAY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

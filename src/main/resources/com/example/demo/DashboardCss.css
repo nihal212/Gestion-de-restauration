@@ -1,0 +1,108 @@
+.dashboard{
+
+}
+.left-form {
+
+    -fx-background-color: beige;
+    /* -fx-font-size: 25px;
+    -fx-font-family:"Tahoma";
+    -fx-text-fill: rgb(5, 132, 5);  */
+
+}
+   .right-form {
+
+
+    -fx-background-image: url("pictures/Design4.jpg");
+    -fx-background-size: cover;
+
+}
+   .right-form2 {
+    -fx-background-image: url("pictures/dash.jpeg");
+    -fx-background-size: cover;
+
+}
+
+.transparent-button {
+    -fx-background-color: transparent;
+}
+
+.left-profil-form {
+    -fx-background-image: url("pictures/leftdash.jpg");
+
+
+}
+.button_Changes {
+    -fx-background-color: #436e47;
+    -fx-border-radius: 45px;
+
+}
+.button_Changes:hover {
+    -fx-background-color: black;
+
+}
+.text_input{
+    -fx-background-color: beige;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #436e47;
+}
+.invisible-divider .split-pane-divider {
+    -fx-divider-position: 1;
+}
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+}
+/* Style de la ligne paire */
+.table-row-cell:odd {
+    -fx-background-color: beige;
+}
+
+/* Style de la ligne impaire */
+.table-row-cell:even {
+    -fx-background-color: #436e47;
+}
+.gradient{
+-fx-background-color: linear-gradient(to bottom right, #436e47,#965f07)
+}
+.head-label{
+-fx-border-width: 0 0 0 3px;
+ -fx-border-color: #436e47;
+-fx-padding: 0 0 0 5px;
+}
+.login-btn{
+-fx-background-color: linear-gradient(to bottom right, #436e47,#c98116);
+-fx-background-radius:5px;
+-fx-cursor:hand;
+}
+.login-btn:hover{
+-fx-background-color: linear-gradient(to bottom right, #4d8851,#bc7717);
+-fx-background-radius:5px;
+-fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+.textfeild{
+-fx-background-color:transparent;
+ -fx-border-color: linear-gradient(to bottom right, #4c824f,#ffa500);
+-fx-border-width: .5px;
+}
+.textfeild:focused{
+-fx-border-width: 1px;
+}
+.create-btn{
+-fx-background-color:transparent;
+-fx-cursor:hand;
+-fx-text-fill:beige;
+-fx-border-color:beige;
+-fx-border-width: 1px;
+}
+.create-btn:hover{
+-fx-background-color:beige;
+-fx-text-fill:#000;
+}
+.firstpage{
+-fx-text-fill:linear-gradient(to bottom right, beige,#ffa319,beige);
+}
+
+
+
+

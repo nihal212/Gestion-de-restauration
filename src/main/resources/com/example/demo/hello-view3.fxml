@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController3">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@styyleeDash.css">
+         <children>
+            <BorderPane layoutY="-3.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="215.0" layoutY="-86.0" prefHeight="48.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="31.0" fitWidth="66.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icoon/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="72.0" layoutY="19.0" prefHeight="17.0" prefWidth="94.0" text="RESTAURANT" textFill="#eb7711cf">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="close" layoutX="1043.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="45.0" styleClass="close" stylesheets="@styyleeDash.css" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-x-48.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="minimize" layoutX="998.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="27.0" prefWidth="45.0" styleClass="minimize" stylesheets="@styyleeDash.css" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-minus-24.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="555.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="546.0" prefWidth="213.0" styleClass="nav-form" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <ImageView fitHeight="71.0" fitWidth="79.0" layoutX="61.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icoon/icons8-avatar-48.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="62.0" layoutY="103.0" text="Welcome" textFill="#86a83f">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" layoutX="16.0" layoutY="124.0" prefHeight="23.0" prefWidth="160.0" text="Admin" textFill="#86a83f">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="92.0" layoutX="108.0" layoutY="164.0" startX="-93.0" stroke="#eb7711" />
+                              <Button fx:id="home_btn" layoutX="32.0" layoutY="198.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="152.0" styleClass="nav-btn" stylesheets="@styyleeDash.css" text="Home" textFill="#86a83f">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-home-26.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="addEmployee_btn" layoutX="32.0" layoutY="255.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="152.0" styleClass="nav-btn" stylesheets="@styyleeDash.css" text="Employes" textFill="#86a83f">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-users-30.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="salary_btn" layoutX="31.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="154.0" styleClass="nav-btn" stylesheets="@styyleeDash.css" text="Salary" textFill="#86a83f">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-dollar-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="menu_btn" layoutX="31.0" layoutY="366.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="43.0" prefWidth="154.0" styleClass="nav-btn" stylesheets="@styyleeDash.css" text="Invetory" textFill="#86a83f">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-inventory-32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="logout" layoutX="14.0" layoutY="501.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="47.0" stylesheets="@styyleeDash.css">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icoon/icons8-log-out-24.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="logout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="72.0" layoutY="512.0" prefHeight="17.0" prefWidth="71.0" text="Lougout" textFill="#86a83f">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="59.0" layoutY="55.0" prefHeight="551.0" prefWidth="885.0" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" layoutY="11.0" prefHeight="530.0" prefWidth="868.0" stylesheets="@styyleeDash.css">
+                                 <children>
+                                    <AnchorPane prefHeight="172.0" prefWidth="868.0" stylesheets="@styyleeDash.css">
+                                       <children>
+                                          <AnchorPane layoutX="21.0" layoutY="15.0" prefHeight="143.0" prefWidth="250.0" stylesheets="@styyleeDash.css">
+                                             <children>
+                                                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icoon/icons8-users-30.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="91.0" layoutY="98.0" text="Total Employees" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Tahoma" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalEmployees" alignment="CENTER_RIGHT" layoutX="91.0" layoutY="18.0" prefHeight="23.0" prefWidth="137.0" text="0" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Arial" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="card" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="309.0" layoutY="13.0" prefHeight="143.0" prefWidth="250.0" stylesheets="@styyleeDash.css">
+                                             <children>
+                                                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icoon/icons8-checked-50.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="91.0" layoutY="101.0" text="Total Presents" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Tahoma" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalPresents" alignment="CENTER_RIGHT" layoutX="91.0" layoutY="21.0" prefHeight="23.0" prefWidth="137.0" text="0" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Arial" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="card" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="597.0" layoutY="13.0" prefHeight="143.0" prefWidth="250.0" stylesheets="@styyleeDash.css">
+                                             <children>
+                                                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="7.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icoon/icons8-minus-24.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="49.0" layoutY="101.0" text="Total Inactive Employees" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Tahoma" size="17.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="home_totalInactiveEm" alignment="CENTER_RIGHT" layoutX="84.0" layoutY="21.0" prefHeight="23.0" prefWidth="137.0" text="0" textFill="#eb7711">
+                                                   <font>
+                                                      <Font name="Arial" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="card" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <BarChart fx:id="home_chart" layoutX="133.0" layoutY="215.0" prefHeight="284.0" prefWidth="603.0" stylesheets="@styyleeDash.css" title="Employees Data Chart">
+                                       <xAxis>
+                                          <CategoryAxis side="BOTTOM" />
+                                       </xAxis>
+                                       <yAxis>
+                                          <NumberAxis side="LEFT" />
+                                       </yAxis>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </BarChart>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="addEmployee_form" layoutX="94.0" layoutY="84.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="550.0" prefWidth="900.0" stylesheets="@styyleeDash.css">
+                                 <children>
+                                    <AnchorPane layoutX="5.0" layoutY="4.0" prefHeight="282.0" prefWidth="860.0" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="251.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                                       <children>
+                                          <TableView fx:id="addEmployee_tableView" layoutX="6.0" layoutY="42.0" onMouseClicked="#addEmployeeSelect" prefHeight="229.0" prefWidth="848.0">
+                                             <columns>
+                                                <TableColumn fx:id="addEmployee_col_employeeID" prefWidth="70.0" text="ID_emp" />
+                                                <TableColumn fx:id="addEmployee_col_firstName" prefWidth="110.0" text="First Name" />
+                                                <TableColumn fx:id="addEmployee_col_lastName" prefWidth="110.0" text="Last Name" />
+                                                <TableColumn fx:id="addEmployee_col_gender" prefWidth="70.0" text="Gender" />
+                                                <TableColumn fx:id="addEmployee_col_phoneNum" prefWidth="130.0" text="Phone #" />
+                                                <TableColumn fx:id="addEmployee_col_adress" prefWidth="110.0" text="Adress" />
+                                                <TableColumn fx:id="addEmployee_col_email" prefWidth="120.0" text="Email" />
+                                                <TableColumn fx:id="addEmployee_col_date" prefWidth="127.0" text="Date_Naissance" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="addEmployee_search" alignment="BOTTOM_LEFT" layoutX="11.0" layoutY="5.0" onKeyTyped="#addEmployeeSearch" prefHeight="32.0" prefWidth="277.0" promptText="Search" styleClass="search" stylesheets="@styyleeDash.css" />
+                                          <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icoon/icons8-search-24.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Label layoutX="28.0" layoutY="317.0" prefHeight="17.0" prefWidth="61.0" text="ID_emp:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_employeeID" layoutX="89.0" layoutY="314.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="13.0" layoutY="362.0" prefHeight="18.0" prefWidth="76.0" text="First Name:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_firstName" layoutX="89.0" layoutY="359.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="13.0" layoutY="403.0" prefHeight="18.0" prefWidth="76.0" text="Last Name:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_lastName" layoutX="89.0" layoutY="400.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label alignment="CENTER" layoutX="13.0" layoutY="446.0" prefHeight="18.0" prefWidth="76.0" text="Gender:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="addEmployee_gender" layoutX="89.0" layoutY="443.0" onAction="#addEmployeeGendernList" prefWidth="150.0" promptText="Choose..." styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="311.0" layoutY="317.0" prefHeight="17.0" prefWidth="61.0" text="Phone #:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_phoneNum" layoutX="372.0" layoutY="314.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="311.0" layoutY="353.0" prefHeight="17.0" prefWidth="61.0" text="Adress:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_adress" layoutX="372.0" layoutY="350.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="311.0" layoutY="394.0" prefHeight="17.0" prefWidth="61.0" text="Email:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_email" layoutX="372.0" layoutY="391.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="257.0" layoutY="434.0" prefHeight="18.0" prefWidth="109.0" text="Date_Naissance:" textFill="#86a83f">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="addEmployee_date" layoutX="372.0" layoutY="431.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <AnchorPane layoutX="732.0" layoutY="321.0" maxHeight="-Infinity" prefHeight="136.0" prefWidth="117.0" stylesheets="@styyleeDash.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="addEmployee_image" fitHeight="147.0" fitWidth="116.0" layoutX="1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="addEmployee_importBtn" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#addEmployeeInsertImage" prefHeight="27.0" prefWidth="117.0" styleClass="import-btn" stylesheets="@styyleeDash.css" text="Import" textFill="#86a83f" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="addEmployee_addBtn" layoutX="684.0" layoutY="481.0" mnemonicParsing="false" onAction="#addEmployeeAdd" prefHeight="35.0" prefWidth="96.0" styleClass="add-btn" stylesheets="@styyleeDash.css" text="Add" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addEmployee_updateBtn" layoutX="554.0" layoutY="481.0" mnemonicParsing="false" onAction="#addEmployeeUpdate" prefHeight="35.0" prefWidth="96.0" styleClass="update-btn" stylesheets="@styyleeDash.css" text="Update" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addEmployee_deleteBtn" layoutX="416.0" layoutY="481.0" mnemonicParsing="false" onAction="#addEmployeeDelete" prefHeight="35.0" prefWidth="96.0" styleClass="delete-btn" stylesheets="@styyleeDash.css" text="Delete" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addEmployee_clearBtn" layoutX="286.0" layoutY="481.0" mnemonicParsing="false" onAction="#addEmployeeReset" prefHeight="35.0" prefWidth="96.0" styleClass="clear-btn" stylesheets="@styyleeDash.css" text="Clear" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="salary_form" layoutX="81.0" layoutY="45.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="12.0" layoutY="9.0" prefHeight="536.0" prefWidth="312.0" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="9.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="49.0" text="ID_emp:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="salary_employeeID" layoutX="88.0" layoutY="47.0" prefWidth="154.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="11.0" layoutY="111.0" prefHeight="20.0" prefWidth="72.0" text="First Name:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="salary_firstName" layoutX="89.0" layoutY="117.0" prefHeight="28.0" prefWidth="152.0" styleClass="label-info" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="11.0" layoutY="166.0" prefHeight="20.0" prefWidth="70.0" text="Last Name:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="salary_lastName" layoutX="88.0" layoutY="167.0" prefHeight="28.0" prefWidth="154.0" styleClass="label-info" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="11.0" layoutY="220.0" prefHeight="20.0" prefWidth="70.0" text="Phone #:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="salary_phone" layoutX="88.0" layoutY="221.0" prefHeight="28.0" prefWidth="154.0" styleClass="label-info" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="11.0" layoutY="270.0" prefHeight="20.0" prefWidth="68.0" text="Salary ($):" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="salary_salary" layoutX="88.0" layoutY="268.0" prefWidth="154.0" styleClass="textfield" />
+                                    <Button fx:id="salary_updateBtn" layoutX="171.0" layoutY="340.0" mnemonicParsing="false" onAction="#salaryUpdate" prefHeight="41.0" prefWidth="101.0" styleClass="update-btn" stylesheets="@styyleeDash.css" text="Update" />
+                                    <Button fx:id="salary_clearBtn" layoutX="41.0" layoutY="340.0" mnemonicParsing="false" onAction="#salaryReset" prefHeight="41.0" prefWidth="101.0" styleClass="clear-btn" stylesheets="@styyleeDash.css" text="Clear" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="341.0" layoutY="9.0" prefHeight="536.0" prefWidth="535.0" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="324.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="9.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="salary_tableView" layoutX="7.0" layoutY="5.0" onMouseClicked="#salarySelect" prefHeight="526.0" prefWidth="522.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="5.0">
+                                       <columns>
+                                          <TableColumn fx:id="salary_col_employeeID" prefWidth="66.0" text="ID_emp" />
+                                          <TableColumn fx:id="salary_col_firstName" prefWidth="115.0" text="First Name" />
+                                          <TableColumn fx:id="salary_col_lastName" prefWidth="107.0" text="Last Name" />
+                                          <TableColumn fx:id="salary_col_phone" prefWidth="113.0" text="Phone #" />
+                                          <TableColumn fx:id="salary_col_salary" prefWidth="120.0" text="Salary ($)" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="inventory_form" layoutX="81.0" layoutY="48.0" prefHeight="554.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="7.0" layoutY="6.0" prefHeight="544.0" prefWidth="899.0" stylesheets="@styyleeDash.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+                                 <children>
+                                    <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="282.0" prefWidth="880.0" stylesheets="@styyleeDash.css" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="4.0">
+                                       <children>
+                                          <TableView fx:id="inventory_tableView" layoutX="7.0" layoutY="3.0" onMouseClicked="#inventorySelectData" prefHeight="273.0" prefWidth="863.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+                                             <columns>
+                                                <TableColumn fx:id="inventory_col_productID" prefWidth="104.0" text="Prodcut ID" />
+                                                <TableColumn fx:id="inventory_col_productName" prefWidth="155.0" text="Product Name" />
+                                                <TableColumn fx:id="inventory_col_type" prefWidth="112.0" text="Type" />
+                                                <TableColumn fx:id="inventory_col_stock" prefWidth="118.0" text="Stock" />
+                                                <TableColumn fx:id="inventory_col_price" prefWidth="101.0" text="Price" />
+                                                <TableColumn fx:id="inventory_col_status" prefWidth="121.0" text="Status" />
+                                                <TableColumn fx:id="inventory_col_date" prefWidth="137.0" text="Date" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Label layoutX="32.0" layoutY="328.0" prefHeight="17.0" prefWidth="74.0" text="Product ID:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_productID" layoutX="124.0" layoutY="326.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="11.0" layoutY="388.0" prefHeight="20.0" prefWidth="95.0" text="Product Name:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_productName" layoutX="124.0" layoutY="386.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="32.0" layoutY="443.0" prefHeight="17.0" prefWidth="74.0" text="Type:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="inventory_type" layoutX="124.0" layoutY="441.0" prefWidth="150.0" promptText="Choose Type..." styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="359.0" layoutY="330.0" prefHeight="17.0" prefWidth="74.0" text="Stock:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_stock" layoutX="451.0" layoutY="328.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="359.0" layoutY="390.0" prefHeight="17.0" prefWidth="74.0" text="Price($):" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="inventory_price" layoutX="451.0" layoutY="388.0" styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <Label layoutX="359.0" layoutY="445.0" prefHeight="17.0" prefWidth="74.0" text="Status:" textFill="#86a83f">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="inventory_status" layoutX="451.0" layoutY="443.0" prefWidth="150.0" promptText="Choose Status..." styleClass="textfield" stylesheets="@styyleeDash.css" />
+                                    <AnchorPane layoutX="713.0" layoutY="302.0" prefHeight="164.0" prefWidth="135.0" stylesheets="@styyleeDash.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="inventory_imageView" fitHeight="139.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="inventory_importBtn" layoutY="138.0" mnemonicParsing="false" onAction="#inventoryImportBtn" prefHeight="25.0" prefWidth="135.0" styleClass="import-btn" stylesheets="@styyleeDash.css" text="Import" textFill="#86a83f" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="inventory_addBtn" layoutX="655.0" layoutY="487.0" mnemonicParsing="false" onAction="#inventoryAddBtn" prefHeight="38.0" prefWidth="117.0" styleClass="add-btn" stylesheets="@styyleeDash.css" text="Add" textFill="#86a83f" />
+                                    <Button fx:id="inventory_updateBtn" layoutX="513.0" layoutY="487.0" mnemonicParsing="false" onAction="#inventoryUpdateBtn" prefHeight="38.0" prefWidth="117.0" styleClass="update-btn" stylesheets="@styyleeDash.css" text="Update" textFill="#86a83f" />
+                                    <Button fx:id="inventory_deleteBtn" layoutX="363.0" layoutY="487.0" mnemonicParsing="false" onAction="#inventoryDeleteBtn" prefHeight="38.0" prefWidth="117.0" styleClass="delete-btn" stylesheets="@styyleeDash.css" text="Delete" textFill="#86a83f" />
+                                    <Button fx:id="inventory_clearBtn" layoutX="221.0" layoutY="487.0" mnemonicParsing="false" onAction="#inventoryClearBtn" prefHeight="38.0" prefWidth="117.0" styleClass="clear-btn" stylesheets="@styyleeDash.css" text="Clear" textFill="#86a83f" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

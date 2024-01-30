@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@DashboardCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController1">
+   <children>
+      <AnchorPane fx:id="homelogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: beige;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0">
+               <children>
+                  <PasswordField fx:id="createpassword" layoutX="73.0" layoutY="228.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfeild" stylesheets="@../../../../resources/com/example/DashboardCss.css" />
+                  <Label layoutX="25.0" layoutY="59.0" styleClass="head-label" stylesheets="@../../../../resources/com/example/DashboardCss.css" text="Register Account" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="createusername" layoutX="73.0" layoutY="186.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfeild" stylesheets="@../../../../resources/com/example/DashboardCss.css" />
+                  <Button fx:id="signupbtn" layoutX="73.0" layoutY="327.0" mnemonicParsing="false" onAction="#SigneUpButton" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Sign Up" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="createpassconfirm" layoutX="72.0" layoutY="274.0" prefHeight="30.0" prefWidth="220.0" promptText="Confirm Password" styleClass="textfeild" stylesheets="@../../../../resources/com/example/DashboardCss.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="350.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0">
+               <children>
+                  <PasswordField fx:id="password" layoutX="73.0" layoutY="228.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfeild" stylesheets="@../../../../resources/com/example/DashboardCss.css" />
+                  <Label layoutX="25.0" layoutY="59.0" styleClass="head-label" stylesheets="@../../../../resources/com/example/DashboardCss.css" text="Login Account" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="73.0" layoutY="186.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfeild" stylesheets="@../../../../resources/com/example/DashboardCss.css" />
+                  <Button fx:id="connectbuttom" layoutX="73.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginbutton" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Login" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sideform" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" styleClass="gradient">
+               <children>
+                  <AnchorPane layoutX="65.0" layoutY="409.0" prefHeight="91.0" prefWidth="220.0" stylesheets="@DashboardCss.css">
+                     <children>
+                        <Button fx:id="btnCretenewAccount" layoutY="37.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@../../../../resources/com/example/DashboardCss.css" text="Create New Account" textFill="BEIGE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Button>
+                        <Label layoutX="24.0" text="Create Account" textFill="BEIGE">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAlreadyHaveAnAccount" layoutY="37.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="40.0" prefWidth="220.0" styleClass="create-btn" stylesheets="@../../../../resources/com/example/DashboardCss.css" text="Already Have An Account" textFill="BEIGE" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="145.0" fitWidth="236.0" layoutX="111.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/WhatsApp_Image_2023-12-23_at_15.07.32-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+      <SplitPane fx:id="home" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <items>
+            <AnchorPane fx:id="lefthomepage" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <ImageView fx:id="personalPicture1" fitHeight="91.0" fitWidth="93.0" layoutX="5.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <Label fx:id="fullnamehome1" layoutX="103.0" layoutY="33.0" prefHeight="45.0" prefWidth="200.0" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="id1" layoutX="103.0" layoutY="75.0" prefHeight="32.0" prefWidth="136.0" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button_notification" layoutX="283.0" layoutY="5.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css" />
+                  <ImageView fx:id="notification1" fitHeight="31.0" fitWidth="105.0" layoutX="306.0" layoutY="9.0" onDragDetected="#switchprofil" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="185.0" fitWidth="198.0" layoutX="74.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/WhatsApp_Image_2023-12-23_at_15.07.32-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="58.0" layoutX="8.0" layoutY="591.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout1" layoutX="42.0" layoutY="593.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="righthomepage" prefHeight="603.0" prefWidth="799.0" styleClass="right-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="93.0" layoutX="65.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/profilData.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="400.0" width="400.0" />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fitHeight="81.0" fitWidth="121.0" layoutX="271.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="400.0" width="600.0" />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="456.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="300.0" width="500.0" />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fitHeight="104.0" fitWidth="127.0" layoutX="753.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D height="500.0" width="500.0" />
+                     </viewport>
+                  </ImageView>
+                  <Button fx:id="profil" layoutX="51.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="47.0" prefWidth="104.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Profile" textFill="BEIGE">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="checkinout1" layoutX="252.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttontablecontrol" layoutX="485.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables  Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="Complaintpage" layoutX="756.0" layoutY="537.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane fx:id="profilhome" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" stylesheets="@../DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome2" layoutX="70.0" layoutY="181.0" prefHeight="36.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonnotif2" layoutX="259.0" layoutY="-4.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" />
+                  <ImageView fitHeight="31.0" fitWidth="105.0" layoutX="289.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="personalPicture2" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout2" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="27.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="19.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="27.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttoncomplaint2" layoutX="123.0" layoutY="455.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttontablecontrol2" layoutX="119.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font></Button>
+                  <Button fx:id="buttoncheckinout2" layoutX="115.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="rightprofil" prefHeight="200.0" prefWidth="200.0" styleClass="left-form" stylesheets="@DashboardCss.css">
+               <children>
+                  <Label layoutX="87.0" layoutY="61.0" prefHeight="35.0" prefWidth="274.0" text="Profile details" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="213.0" text="Last name">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="390.0" prefHeight="35.0" prefWidth="274.0" text="Contact information" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="255.0" text="Gender">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="299.0" text="Address">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="130.0" text="ID">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="123.0" layoutY="173.0" text="First name">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="130.0" layoutY="451.0" text="Phone">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="130.0" layoutY="494.0" text="Email">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="modify_information" layoutX="674.0" layoutY="563.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="50.0" prefWidth="221.0" styleClass="login-btn" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css" text="Modify my information" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="id2" layoutX="311.0" layoutY="130.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="lastname" layoutX="311.0" layoutY="213.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="gender" layoutX="311.0" layoutY="255.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="firstname" layoutX="311.0" layoutY="173.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="address" layoutX="311.0" layoutY="299.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label layoutX="126.0" layoutY="339.0" prefHeight="17.0" prefWidth="136.0" text="Date of birth">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateofbirth" layoutX="311.0" layoutY="339.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="phone" layoutX="311.0" layoutY="451.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+                  <Label fx:id="email" layoutX="311.0" layoutY="494.0" prefHeight="17.0" prefWidth="255.0">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane fx:id="modifyhome" dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil1" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome3" layoutX="70.0" layoutY="181.0" prefHeight="37.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="button_notification3" layoutX="259.0" layoutY="-4.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" />
+                  <ImageView fitHeight="31.0" fitWidth="105.0" layoutX="289.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="personalPicture3" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout3" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="27.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="19.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="27.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonComplaint3" layoutX="123.0" layoutY="455.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonControls3" layoutX="119.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttoncheck3" layoutX="115.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="rightprofil1" prefHeight="200.0" prefWidth="200.0" styleClass="left-form" stylesheets="@DashboardCss.css">
+               <children>
+                  <Label layoutX="87.0" layoutY="61.0" prefHeight="35.0" prefWidth="274.0" text="Profile Settings" textFill="#436e47">
+                     <font>
+                        <Font name="Arial Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="savechanges" layoutX="672.0" layoutY="556.0" mnemonicParsing="false" onAction="#ModifyInformation" prefHeight="45.0" prefWidth="167.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="Save Changes" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="16.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="776.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120.0" text="Date of birth">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputdateofbirth" prefHeight="25.0" prefWidth="236.0" promptText="YYYY-MM-DD" styleClass="text_input" stylesheets="@DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120.0" text="Address">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="8.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputaddress" prefHeight="25.0" prefWidth="236.0" promptText="enter your complete mailing address" styleClass="text_input" stylesheets="@DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="465.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120.0" text="Phone">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputphone" prefHeight="25.0" prefWidth="236.0" promptText="+212 XXXXXXXXX" styleClass="text_input" stylesheets="@DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="120.0" text="Email">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputemail" prefHeight="25.0" prefWidth="236.0" promptText="username@domain.com" styleClass="text_input" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="9.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="465.0">
+                           <children>
+                              <Button fx:id="btnchangepassword" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="201.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Change Password">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hbox1" alignment="CENTER_LEFT" layoutX="9.0" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="673.0" visible="false">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="231.0" text="Old password">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="150.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputoldpass" prefHeight="25.0" prefWidth="236.0" styleClass="text_input" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hbox2" alignment="CENTER_LEFT" layoutX="9.0" layoutY="236.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="676.0" visible="false">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="231.0" text="New password">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="150.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputnewpass" prefHeight="25.0" prefWidth="236.0" styleClass="text_input" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hbox3" alignment="CENTER_LEFT" layoutX="9.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="677.0" visible="false">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="231.0" text="Confirm new password">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="150.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="inputconfirmnewpass" prefHeight="25.0" prefWidth="236.0" styleClass="text_input" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="previouspage" layoutX="14.0" layoutY="604.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="35.0" prefWidth="120.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="      Previous " textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="23.0" fitWidth="29.0" layoutX="26.0" layoutY="611.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/previeuspage.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane fx:id="notificationpage" dividerPositions="0.5" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil11" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="300.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome4" layoutX="70.0" layoutY="181.0" prefHeight="37.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="personalPicture4" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="542.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout4" layoutX="115.0" layoutY="541.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="27.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="19.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="27.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonComplaint4" layoutX="123.0" layoutY="475.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonControls4" layoutX="119.0" layoutY="398.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttoncheck4" layoutX="115.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="37.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/profilData.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonprofile4" layoutX="135.0" layoutY="259.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Profile" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: beige;">
+               <children>
+                  <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="294.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" prefWidth="300.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="135.0" text="Notification" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="All" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="30.0" />
+                                 </HBox.margin></Label>
+                              <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pictures/expandicon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="35.0" />
+                                 </HBox.margin></ImageView>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="listviewOrder" prefHeight="568.0" prefWidth="300.0" style="-fx-border-color: transparent; -fx-background-color: transparent; -fx-control-inner-background: transparent;" stylesheets="@DashboardCss.css" />
+                     </children>
+                  </VBox>
+                  <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" prefHeight="640.0" prefWidth="2.0">
+                     <children>
+                        <Line endX="94.6666259765625" endY="28.666667938232422" layoutX="-87.0" layoutY="-8.0" startX="94.6666259765625" startY="675.3333740234375" />
+                     </children>
+                  </AnchorPane>
+                  <VBox fx:id="pageorderdetails" prefHeight="639.0" prefWidth="635.0" visible="false">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="Table Number">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="numtablenotif" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="Customer">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="idcustomerdetails" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="Order :">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="153.0" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="The name of the product">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="prodnamedetails" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="224.0" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="Quantity">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="quantitydetails" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="150.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="295.0" prefHeight="71.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label text="Total to pay">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="110.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="pricedetails" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="438.0" prefHeight="159.0" prefWidth="631.0" spacing="60.0">
+                           <children>
+                              <Label fx:id="datedetails" layoutX="10.0" layoutY="10.0" textFill="#436e47">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="530.0" top="60.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hboxorderdetails" alignment="CENTER_LEFT" layoutX="10.0" layoutY="438.0" prefHeight="47.0" prefWidth="631.0" spacing="60.0" />
+                     </children></VBox>
+               </children>
+            </HBox>
+         </items>
+      </SplitPane>
+      <SplitPane fx:id="Controltablespage" dividerPositions="0.5" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil2" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome5" layoutX="70.0" layoutY="181.0" prefHeight="36.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonnotif5" layoutX="259.0" layoutY="-4.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" />
+                  <ImageView fitHeight="31.0" fitWidth="105.0" layoutX="289.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="personalPicture5" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout5" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="27.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="60.0" layoutX="42.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/profilData.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="27.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonprofile5" layoutX="135.0" layoutY="449.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Profile" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonComplaint5" layoutX="119.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttoncheckinout5" layoutX="115.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: beige;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="895.0">
+                     <children>
+                        <Label text="Table Status Manager" textFill="#436e47">
+                           <font>
+                              <Font name="Arial Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="432.0" prefWidth="895.0">
+                     <children>
+                        <TableView fx:id="tableviewControl" prefHeight="432.0" prefWidth="611.0" style="-fx-font-size: 16;" styleClass="table-row-cell" stylesheets="@DashboardCss.css">
+                           <columns>
+                              <TableColumn fx:id="Numtable" minWidth="-Infinity" prefWidth="200.0" text="Table number" />
+                              <TableColumn fx:id="Numplaces" minWidth="-Infinity" prefWidth="200.0" text="Table state" />
+                              <TableColumn fx:id="TableState" minWidth="-Infinity" prefWidth="200.0" text="Table capacity" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="895.0" spacing="70.0">
+                     <children>
+                        <Label text="Total number of tables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="250.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="totalnumberoftables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="34.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="499.0" prefHeight="40.0" prefWidth="895.0" spacing="70.0">
+                     <children>
+                        <Label text="Number of reserved tables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="250.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="Numberofreservedtables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="548.0" prefHeight="44.0" prefWidth="895.0" spacing="70.0">
+                     <children>
+                        <Label text="Number of released tables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="250.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="Numberofreleasedtables">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ChangeStateoftable" mnemonicParsing="false" onAction="#TableviewControl" prefHeight="44.0" prefWidth="183.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="Change State Of Table" textFill="BEIGE">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+      <AnchorPane fx:id="Controltablespage2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="441.0" style="-fx-background-color: beige; -fx-border-color: #436e47;" visible="false">
+         <children>
+            <VBox prefHeight="306.0" prefWidth="441.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Choose the table number">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="choicebox" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #436e47; -fx-font-size: 16;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Choose the table state">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="choicebox2" prefWidth="150.0" style="-fx-background-color: #436e47; -fx-font-size: 16;">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="Cancel" mnemonicParsing="false" onAction="#confirmcancelTablesControl" prefHeight="34.0" prefWidth="109.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="Cancel" textFill="BEIGE">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Confirm" layoutX="128.0" layoutY="40.0" mnemonicParsing="false" onAction="#confirmcancelTablesControl" prefHeight="34.0" prefWidth="109.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="Confirm" textFill="BEIGE">
+                           <font>
+                              <Font name="Arial Bold" size="21.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <SplitPane fx:id="pagecheckinout" dividerPositions="0.5" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil21" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome6" layoutX="70.0" layoutY="181.0" prefHeight="36.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonnotif6" layoutX="259.0" layoutY="-4.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" />
+                  <ImageView fitHeight="31.0" fitWidth="105.0" layoutX="289.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="personalPicture6" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout6" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="44.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/profilData.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="81.0" layoutX="27.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/reclamationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="105.0" layoutX="23.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonComplaint6" layoutX="130.0" layoutY="449.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Complaint" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonControls6" layoutX="119.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonprofile6" layoutX="139.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Profile" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: beige;">
+               <children>
+                  <VBox prefHeight="640.0" prefWidth="895.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Check-in / Check-out Form" textFill="#8b4513e8">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="53.0" prefWidth="895.0" spacing="50.0">
+                           <children>
+                              <Label text="Employee ID               :">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Label fx:id="idcheckinout" alignment="CENTER" prefHeight="34.0" prefWidth="600.0" style="-fx-border-color: #DEB887; -fx-background-color: #D2B48C;" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="53.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Label text="Employee Name        :">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Label fx:id="lastnamecheck" alignment="CENTER" prefHeight="34.0" prefWidth="277.0" style="-fx-border-color: #DEB887; -fx-background-color: #D2B48C;" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="firstnamecheck" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="277.0" style="-fx-border-color: #DEB887; -fx-background-color: #D2B48C;" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="233.0" prefHeight="53.0" prefWidth="200.0" spacing="190.0">
+                           <children>
+                              <Label text="today's date ">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="145.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Time">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="357.0" prefHeight="53.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <DatePicker fx:id="datePicker" prefHeight="34.0" prefWidth="277.0" promptText="MM/DD/YYYY" style="-fx-background-color: #D2B48C; -fx-control-inner-background: #D2B48C; -fx-border-color: #D2B48C; -fx-alignment: center;" styleClass="date-picker">
+                                 <HBox.margin>
+                                    <Insets left="146.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <TextField fx:id="timeenter" prefHeight="34.0" prefWidth="201.0" promptText="HH:MM" style="-fx-background-color: #D2B48C; -fx-border-color: #DEB887; -fx-prompt-text-fill: #887a6f;">
+                                 <HBox.margin>
+                                    <Insets left="39.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <ChoiceBox fx:id="choiceAMPM" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #D2B48C; -fx-border-color: #DEB887;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="87.0" prefWidth="895.0" spacing="100.0">
+                           <children>
+                              <RadioButton fx:id="checkInRadioButton" mnemonicParsing="false" style="-fx-mark-color: #D2B48C;" text="Check In">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleGroup" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="checkOutRadioButton" mnemonicParsing="false" style="-fx-mark-color: #D2B48C;" text="Check Out" toggleGroup="$toggleGroup">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="463.0" prefHeight="87.0" prefWidth="895.0" spacing="100.0">
+                           <children>
+                              <Button fx:id="checkinoutSubmit" mnemonicParsing="false" onAction="#submitcheckinout" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #8B4513;" text="SEND" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <SplitPane fx:id="PageComplaint" dividerPositions="0.5" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../DashboardCss.css" visible="false">
+         <items>
+            <AnchorPane fx:id="leftprofil211" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="339.0" styleClass="left-profil-form" stylesheets="@../../../../../src/main/java/com/example/demo/DashboardCss.css">
+               <children>
+                  <Label fx:id="fullnamehome7" layoutX="70.0" layoutY="181.0" prefHeight="36.0" prefWidth="200.0">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonnotif7" layoutX="259.0" layoutY="-4.0" minWidth="25.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="58.0" prefWidth="93.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" />
+                  <ImageView fitHeight="31.0" fitWidth="105.0" layoutX="289.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/notificationicon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="personalPicture7" fitHeight="120.0" fitWidth="138.0" layoutX="115.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="49.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/logouticon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="logout7" layoutX="115.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchprofil" prefHeight="45.0" prefWidth="129.0" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Log out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="65.0" fitWidth="88.0" layoutX="44.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/profilData.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="81.0" layoutX="27.0" layoutY="438.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/checkinout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="105.0" layoutX="23.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/tableicon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttoncheckinout7" layoutX="123.0" layoutY="450.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Check-In/Out" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonControls7" layoutX="119.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Tables Control" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonprofile7" layoutX="139.0" layoutY="308.0" mnemonicParsing="false" onAction="#switchprofil" styleClass="transparent-button" stylesheets="@DashboardCss.css" text="Profile" textFill="BEIGE">
+                     <font>
+                        <Font name="Arial Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: beige;">
+               <children>
+                  <VBox prefHeight="640.0" prefWidth="895.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Server's Complaints " textFill="#436e47e8">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="249.0" prefWidth="895.0" spacing="50.0">
+                           <children>
+                              <TextArea fx:id="descriptionreclamation" prefHeight="289.0" prefWidth="552.0" promptText="Description of the problem" style="-fx-background-color: #D2B48C; -fx-control-inner-background: beige;" styleClass="textfeild" stylesheets="@DashboardCss.css">
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="233.0" prefHeight="128.0" prefWidth="895.0" spacing="50.0">
+                           <children>
+                              <Label text="Choose the type of complaint">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="choicetypereclamation" prefHeight="35.0" prefWidth="193.0" style="-fx-background-color: #436e47;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="359.0" prefHeight="153.0" prefWidth="895.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="uploadImageButton" mnemonicParsing="false" onAction="#handleUploadImageButton" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #436e47;" text="Upload File" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <ImageView fx:id="uploadedImageView" fitHeight="134.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="463.0" prefHeight="87.0" prefWidth="895.0" spacing="100.0">
+                           <children>
+                              <Button fx:id="reclamationSubmit" mnemonicParsing="false" onAction="#submitreclamation" prefHeight="33.0" prefWidth="106.0" styleClass="login-btn" stylesheets="@DashboardCss.css" text="Submit" textFill="BEIGE">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="300.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</StackPane>

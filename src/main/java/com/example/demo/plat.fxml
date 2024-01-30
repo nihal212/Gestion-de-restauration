@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="menuItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PlatpaimentController">
+   <children>
+      <AnchorPane fx:id="item" layoutX="74.0" prefHeight="178.0" prefWidth="730.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="162.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-0.4000000000000057" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="519.2" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="menuimage" fitHeight="174.0" fitWidth="208.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="menuorder" layoutX="645.0" layoutY="134.0" mnemonicParsing="false" onAction="#addBtn" styleClass="order" stylesheets="@style.css" text="Order now" AnchorPane.rightAnchor="21.40000000000009">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Spinner fx:id="menuspinner" layoutX="544.0" layoutY="134.0" prefHeight="26.0" prefWidth="85.0" stylesheets="@style.css" />
+            <CheckBox fx:id="chekboxitem" alignment="CENTER" layoutX="232.0" layoutY="125.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-background-radius: 5;" text="book a table" textFill="WHITE" AnchorPane.rightAnchor="404.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chekboxitem" alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="150.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="94.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-background-radius: 5;" text="take it" textFill="WHITE" AnchorPane.rightAnchor="404.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="prod_name" alignment="TOP_LEFT" layoutX="227.0" layoutY="24.0" prefHeight="20.0" prefWidth="211.0" style="-fx-background-color: white;" text="name-plat">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="prod_price" alignment="CENTER" layoutX="273.0" layoutY="47.0" style="-fx-background-color: white;" text="price$">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

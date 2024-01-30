@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="1512.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <left>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="858.0" prefWidth="260.0" styleClass="left" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="217.0" prefWidth="258.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="1.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <ImageView fitHeight="215.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@LogoDashWaiter.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="329.0" styleClass="myButton" stylesheets="@style.css" text="Name_resto">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Calibri Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="Dashboard" mnemonicParsing="false" onAction="#switchForm" prefHeight="26.0" prefWidth="96.0" styleClass="myButton" stylesheets="@style.css" text="Dashboard">
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="10.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="MENU" mnemonicParsing="false" onAction="#switchForm" styleClass="myButton" stylesheets="@style.css" text="MENU">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(2).png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="67.0" styleClass="myButton" stylesheets="@style.css" text="ORDER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(3).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="5.0" top="6.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" styleClass="myButton" stylesheets="@style.css" text="DELIVERY ORDER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="50.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@output-onlinepngtools%20(4).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button mnemonicParsing="false" styleClass="myButton" stylesheets="@style.css" text="Log Out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" top="60.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox prefHeight="20.0" prefWidth="780.0" styleClass="top" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@téléchargement%20(1).png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <TextField prefHeight="26.0" prefWidth="497.0" promptText="search for  food" style="-fx-background-radius: 15;" styleClass="searchField" stylesheets="@style.css">
+               <HBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <HBox.margin>
+                  <Insets left="600.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@téléchargement%20(2).png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="5.0" top="2.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" styleClass="myButton" stylesheets="@../../../../style.css" text="USER-Name">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="260.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="722.0" prefWidth="1448.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="clientinterface" layoutX="10.0" layoutY="10.0" prefHeight="708.0" prefWidth="1229.0">
+               <children>
+                  <AnchorPane fx:id="menuforme" layoutX="30.0" layoutY="96.0" prefHeight="624.0" prefWidth="815.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <ScrollPane fx:id="menu_scroll" layoutX="30.0" layoutY="76.0" prefHeight="526.0" prefWidth="754.0" style="-fx-border-radius: 20;" AnchorPane.rightAnchor="31.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane" prefHeight="542.0" prefWidth="534.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label layoutX="214.0" layoutY="16.0" prefHeight="22.0" prefWidth="192.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="HOW DO YOU WANT TO">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="38.0" prefHeight="26.0" prefWidth="79.0" style="-fx-text-fill: rgba(255, 147, 30, 255);" styleClass="myquestion" stylesheets="@style.css" text="ORDER ?">
+                           <font>
+                              <Font name="Calibri Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="86.0" fitWidth="64.0" layoutX="399.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@output-onlinepngtools%20(14).png" />
+                           </image>
+                        </ImageView>
+                        <CheckBox fx:id="checkbook" layoutX="503.0" layoutY="4.0" mnemonicParsing="false" onAction="#choiseOrder" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-text-fill: WHITE; -fx-background-radius: 10;" text="BOOK A TABLE" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checktake" layoutX="503.0" layoutY="39.0" mnemonicParsing="false" onAction="#choicetake" prefHeight="23.0" prefWidth="107.0" style="-fx-background-color: rgba(255, 147, 30, 255); -fx-text-fill: WHITE; -fx-background-radius: 10;" text="TAKE IT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="payemment" layoutX="863.0" layoutY="6.0" prefHeight="711.0" prefWidth="407.0" style="-fx-background-color: white; -fx-background-radius: 30;" stylesheets="@style.css" AnchorPane.leftAnchor="863.0">
+                     <children>
+                        <TableView fx:id="menu_table" layoutX="24.0" layoutY="25.0" onMouseClicked="#menuSelectOrder" prefHeight="342.0" prefWidth="358.0">
+                           <columns>
+                              <TableColumn fx:id="menu_platname" prefWidth="193.60003662109375" text="plat name" />
+                              <TableColumn fx:id="menu_Quantité" prefWidth="84.7999267578125" text="quantity" />
+                              <TableColumn fx:id="menu_pricecol" prefWidth="79.2000732421875" text="price" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="totaltaxt" layoutX="168.0" layoutY="436.0" onAction="#menuGetTotal" promptText="\$0.0" style="-fx-border: none;" />
+                        <Label fx:id="total" alignment="CENTER" layoutX="100.0" layoutY="439.0" prefHeight="18.0" prefWidth="49.0" text="Total :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="amounttext" layoutX="168.0" layoutY="482.0" onAction="#menuAmount" promptText="\$0.0" />
+                        <Label fx:id="amount" alignment="CENTER" layoutX="92.0" layoutY="482.0" prefHeight="25.0" prefWidth="66.0" text="Amount :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="change" alignment="CENTER" layoutX="94.0" layoutY="532.0" prefHeight="20.0" prefWidth="62.0" text="Change :" textFill="#ff931e">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="changetext" layoutX="168.0" layoutY="529.0" promptText="\$0.0" />
+                        <Button fx:id="menupay" alignment="CENTER" layoutX="42.0" layoutY="577.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#menuPayBtn" prefHeight="52.0" prefWidth="350.0" styleClass="buttonpay" stylesheets="@style.css" text="pay">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="menuremove" layoutX="42.0" layoutY="661.0" mnemonicParsing="false" onAction="#menuRemoveBtn" prefHeight="26.0" prefWidth="75.0" styleClass="buttonpay" text="Remove" />
+                        <Button fx:id="menurecip" layoutX="296.0" layoutY="661.0" mnemonicParsing="false" onAction="#menuReceiptBtn" prefHeight="26.0" prefWidth="75.0" styleClass="buttonpay" stylesheets="@style.css" text="Receipt" />
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutX="30.0" layoutY="2.0" prefHeight="79.0" prefWidth="815.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="71.0" fitWidth="96.0" layoutX="25.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(19).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="dishes" layoutX="100.0" layoutY="33.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="DISHES">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="56.0" fitWidth="72.0" layoutX="35.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools__18_-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="fast_food" layoutX="100.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="FAST-FOOD">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="64.0" fitWidth="82.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(20).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="soup" layoutX="87.0" layoutY="44.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="SOUP">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="65.0" fitWidth="53.0" layoutX="23.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@output-onlinepngtools%20(21).png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="drinks" layoutX="85.0" layoutY="45.0" mnemonicParsing="false" onAction="#switchtypes" styleClass="myButton" stylesheets="@style.css" text="DRINKS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1.0" layoutY="-2.0" prefHeight="722.0" prefWidth="1320.0" visible="false">
+               <children>
+                  <AnchorPane prefHeight="282.0" prefWidth="820.0" style="-fx-background-color: white; -fx-background-radius: 60;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <ImageView fitHeight="264.0" fitWidth="496.0" layoutX="384.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="394.0">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/output-onlinepngtools%20(11).png" />
+                           </image>
+                        </ImageView>
+                        <HBox layoutX="14.0" layoutY="141.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="280.0" style="-fx-background-radius: 20; -fx-background-color: rgb(134, 168, 63);" AnchorPane.bottomAnchor="30.99999999999997" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="623.6">
+                           <children>
+                              <AnchorPane prefHeight="110.0" prefWidth="101.0">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="14.0" text="Label" textFill="WHITE" />
+                                    <Label layoutX="12.0" layoutY="71.0" prefHeight="18.0" prefWidth="72.0" text="name plat" textFill="WHITE" />
+                                    <Label alignment="CENTER" layoutX="24.0" layoutY="46.0" prefHeight="18.0" prefWidth="48.0" text="price$" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="110.0" prefWidth="101.0">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="14.0" text="Label" textFill="WHITE" />
+                                    <Label layoutX="24.0" layoutY="71.0" prefHeight="18.0" prefWidth="72.0" text="name plat" textFill="WHITE" />
+                                    <Label alignment="CENTER" layoutX="24.0" layoutY="42.0" prefHeight="11.0" prefWidth="48.0" text="price$" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="97.0" prefWidth="81.0">
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label layoutX="25.0" layoutY="14.0" text="Label" textFill="WHITE" />
+                                    <Label layoutX="17.0" layoutY="77.0" prefHeight="18.0" prefWidth="72.0" text="name plat" textFill="WHITE" />
+                                    <Label alignment="CENTER" layoutX="15.0" layoutY="46.0" prefHeight="18.0" prefWidth="48.0" text="price$" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="-7.0" layoutY="44.0" prefHeight="70.0" prefWidth="195.0" style="-fx-background-radius: 60;" text="special deal" textFill="#86a83f">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="109.0" fitWidth="154.0" layoutX="168.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Downloads/téléchargement%20(5).jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <GridPane layoutX="9.0" layoutY="341.0" prefHeight="370.0" prefWidth="896.0" style="-fx-background-color: white; -fx-background-radius: 60;">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label alignment="CENTER" layoutX="385.0" layoutY="286.0" prefHeight="53.0" prefWidth="195.0" style="-fx-background-radius: 60;" text="BEST FOOD" textFill="#ff931e">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="947.0" layoutY="14.0" prefHeight="690.0" prefWidth="314.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
