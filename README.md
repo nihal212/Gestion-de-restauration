@@ -27,6 +27,10 @@
 ![7](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/992b13eb-3365-49ff-970a-fda392b8d885)
 
 
+![8](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/21581d11-9e1f-49a2-a664-6d31ab92c400)
+
+
+
 
 
                                         
