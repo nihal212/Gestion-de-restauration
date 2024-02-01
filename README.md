@@ -4,6 +4,12 @@
                                              login
 
 ![2](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/ba2a08a8-8612-4650-9636-45f8be735bd9)
+
+
+                                  INTERFACE CLIENT(DASHBOARD) 
+![4](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/c8fd2570-6db3-4be8-b0f5-ca82af2111c3)
+
+
                                         
                                         interface admin
  
