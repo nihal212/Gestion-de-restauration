@@ -29,6 +29,12 @@
 
 ![8](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/21581d11-9e1f-49a2-a664-6d31ab92c400)
 
+                                                      INTERFACE EMPLOYE
+
+
+![9](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/bac5dfa1-ba93-4adf-996e-4a5fe22205a4)
+
+
 
 
 
