@@ -21,6 +21,13 @@
 
 ![6](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/63df77f8-02fa-4a8d-9441-9fc541d7f10a)
 
+                                                        INTERFACE ADMIN
+
+
+![7](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/992b13eb-3365-49ff-970a-fda392b8d885)
+
+
+
 
                                         
                                                          
