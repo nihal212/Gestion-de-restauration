@@ -15,6 +15,13 @@
 
 ![5](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/4e61c5cd-854d-447d-8efe-03ec4e50d695)
 
+
+                                                      INTERFACE CLIENT(DELIVERY) 
+
+
+![6](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/63df77f8-02fa-4a8d-9441-9fc541d7f10a)
+
+
                                         
                                                              interface admin
  
