@@ -1,3 +1,7 @@
+L'application se compose de trois interfaces utilisateur distinctes : client, admin et waiter. Chaque interface est dédiée à des fonctionnalités spécifiques correspondant à son utilisation. Voici quelques images représentant ces interfaces dans notre application."
+                                                          
+                                                          
+                                                          
                                                           Premier interface 
                                                           
  ![1](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/0898312f-97d3-4b79-8680-5011b581d6e0)
