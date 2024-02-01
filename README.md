@@ -23,8 +23,5 @@
 
 
                                         
-                                                             interface admin
- 
-![3](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/22523ff9-9cec-411b-935a-4710c3956061)
-
+                                                         
                                         
