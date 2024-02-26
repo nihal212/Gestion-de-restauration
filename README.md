@@ -4,10 +4,10 @@ L'application se compose de trois interfaces utilisateur distinctes : client, ad
 
 Technologies et Outils : 
 
-java
-javafx 
-css
-Mysql
+java,
+javafx ,
+css,
+Mysql.
                                                           
                                                           
                                                           
