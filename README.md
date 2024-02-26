@@ -34,6 +34,11 @@ Mysql.
 
 ![6](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/63df77f8-02fa-4a8d-9441-9fc541d7f10a)
 
+
+
+![WhatsApp Image 2024-02-26 at 17 32 04](https://github.com/nihal212/Gestion-de-restauration/assets/120100432/198eba01-97d7-44cd-8533-e42183d739c7)
+
+
                                                  INTERFACE ADMIN
 
 
